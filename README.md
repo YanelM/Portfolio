@@ -14,17 +14,6 @@ Ce site présente mes projets, mes compétences et mon parcours en développemen
 Ce portfolio a été créé afin de mettre en avant mes réalisations et mes compétences en développement front-end.  
 Il sera régulièrement mis à jour avec de nouveaux projets et améliorations.
 
-## Structure du projet
-
-portfolio/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── img/
-    └── (images de ton site)
-
 ## Contact
 
 ✉️ Email : yanel.moisson@gmail.com
