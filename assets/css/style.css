@@ -340,17 +340,17 @@ header a {
     right: 5rem;
 }
 .suite-experience-haut {
-    top: 225vh;
+    top: 235vh;
     right: 5rem;
     display: block;
     transform: rotate(180deg);
 }
 .suite-experience-bas {
-    top: 302vh;
+    top: 312vh;
     right: 5rem;
 }
 .suite-formation-haut {
-    top: 344vh;
+    top: 355vh;
     right: 5rem;
     display: block;
     transform: rotate(180deg);
@@ -514,3 +514,4 @@ fieldset button:hover {
     box-shadow: 1px 1px 10px var(--malachite-color);
 
 }
+
