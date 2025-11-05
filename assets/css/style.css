@@ -204,7 +204,7 @@ header a {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-image: url("../images/IMG_20250922_191541.jpg"); /* 👈 remplace par ta photo */
+    background-image: url("../images/yanelmoissonphoto.png"); /* 👈 remplace par ta photo */
     background-size: cover;
     background-position: center;
     border: 6px solid var(--mindaro-color);
@@ -512,4 +512,5 @@ fieldset button:hover {
     border: 1px solid var(--magnolia-color);
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
+
 }
