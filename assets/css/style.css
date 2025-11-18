@@ -122,6 +122,23 @@ header a {
 .icon:hover {
     transform: rotateY(360deg);
 }
+#scroll-down-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 12px 18px;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 14px;
+}
+#scroll-down-btn:hover {
+	transform: translateY(-1px);
+}
+#scroll-down-btn:active {
+	transform: translateY(1px);
+}
+
 /* Section home */
 .home {
     display: flex;
@@ -514,6 +531,7 @@ fieldset button:hover {
     box-shadow: 1px 1px 10px var(--malachite-color);
 
 }
+
 
 
 
