@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -40,4 +41,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
             });
         });
     });
+
+    const btn = document.getElementById("scroll-down-btn");
+
+    btn.addEventListener("click", () => {
+        window.scrollBy({
+            top: 200,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+    
 });
+
