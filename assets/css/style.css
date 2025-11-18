@@ -362,6 +362,9 @@ header a {
     height: 100vh;
     padding-top: 8rem;
 }
+#experiences h2 {
+    padding-bottom: 1rem;
+}
 .experience {
     background-color: var(--night-color);
     padding: 1rem;
@@ -568,5 +571,6 @@ fieldset button:hover {
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
 }
+
 
 
