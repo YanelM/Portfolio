@@ -362,6 +362,53 @@ header a {
     height: 100vh;
     padding-top: 8rem;
 }
+.experience {
+    background-color: var(--night-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 60%;
+}
+.experience div {
+    display: flex;
+    justify-content: space-between;
+}
+.entreprise {
+    padding: 0.5rem;
+}
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+.carousel ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    animation: slide 12s infinite;
+}
+.carousel li {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0.5rem;
+    background-color: var(--seagreen-color);
+}
+.non-carousel {
+    list-style: none;
+}
+.non-carousel li {
+    padding: 0.5rem;
+    background-color: var(--seagreen-color);
+}
+/* Animation pour le défilement */
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    25%  { transform: translateX(0%); }
+    37%  { transform: translateX(-90%); }
+    62%  { transform: translateX(-102%); }
+    69%  { transform: translateX(-192%); }
+    93%  { transform: translateX(-204%); }
+    100%  { transform: translateX(0%); }
+}
+
 
 /* Section projets */
 #projets {
@@ -521,4 +568,5 @@ fieldset button:hover {
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
 }
+
 
