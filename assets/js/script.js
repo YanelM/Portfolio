@@ -42,15 +42,47 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 
+    const about = document.getElementById("about");
+    const formations = document.getElementById("formations");
     const btn = document.getElementById("scroll-down-btn");
+
+    function showBtn() {
+    btn.style.display = "block";
+    }
+
+    function hideBtn() {
+    btn.style.display = "none";
+    }
+
+    // Observer la section "À propos"
+    const observerAbout = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        showBtn();
+        } else {
+        hideBtn();
+        }
+    });
+    }, { threshold: 0.1 });
+
+    observerAbout.observe(about);
+
+    // Observer la section "Formations" pour cacher le bouton
+    const observerFormations = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        hideBtn();     // on cache si on entre dans formations
+        }
+    });
+    }, { threshold: 0.1 });
+
+    observerFormations.observe(formations);
 
     btn.addEventListener("click", () => {
         window.scrollBy({
-            top: 200,
-            left: 0,
-            behavior: "smooth"
+            top: 800,
+            behavior: "smooth",
         });
     });
     
 });
-
