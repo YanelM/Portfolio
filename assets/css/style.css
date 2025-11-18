@@ -53,6 +53,13 @@ body::before {
     background: white;
     border-radius: 2px;
 }
+body a:hover {
+	transform: translateY(-1px);
+}
+body a:active {
+	transform: translateY(1px);
+}
+
 /* Header */
 header {
     display: flex;
@@ -121,22 +128,6 @@ header a {
 /* Au survol, on applique une rotation 3D */
 .icon:hover {
     transform: rotateY(360deg);
-}
-#scroll-down-btn {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	padding: 12px 18px;
-	border: none;
-	border-radius: 30px;
-	cursor: pointer;
-	font-size: 14px;
-}
-#scroll-down-btn:hover {
-	transform: translateY(-1px);
-}
-#scroll-down-btn:active {
-	transform: translateY(1px);
 }
 
 /* Section home */
@@ -265,10 +256,35 @@ header a {
 }
 
 /* Section about */
+#scroll-down-btn {
+	position: fixed;
+	bottom: 2rem;
+	right: 3rem;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+    display: none;
+    z-index: 1000;
+    background-color: transparent;
+}
+#scroll-down-btn img {
+    width: 27px;
+    height: 27px;
+}
+#scroll-down-btn:hover {
+	transform: translateY(-1px);
+}
+#scroll-down-btn:active {
+	transform: translateY(1px);
+}
+
 #about {
     height: 300vh;
 }
 .about {
+    height: 100vh;
+}
+.about-first {
     display: flex;
     justify-content: space-between;
     padding: 5rem 0;
@@ -277,13 +293,13 @@ header a {
 .about-right {
     width: 45%;
 }
-.about p {
+.about-first p {
     text-align: justify;
     font-size: .9rem;
     line-height: 1.5;      /* espace entre les lignes */
     letter-spacing: 0.5px; /* espace entre les lettres */
 }
-.about h3 {
+.about-first h3 {
     padding-top: 1rem;
     color: var(--mindaro-color);
     text-shadow: 1px 1px 10px var(--mindaro-color);
@@ -341,36 +357,10 @@ header a {
     padding-left: 4rem;
     color: var(--malachite-color);
 }
-.suite {
-    text-decoration: none;
-    color: var(--magnolia-color);
-    padding: .7rem;
-    border-radius: 30px;
-    position: absolute;
-}
-.suite-img {
-    width: 20px;
-    height: 20px;
-}
-.suite-about-bas {
-    top: 209vh;
-    right: 5rem;
-}
-.suite-experience-haut {
-    top: 225vh;
-    right: 5rem;
-    display: block;
-    transform: rotate(180deg);
-}
-.suite-experience-bas {
-    top: 302vh;
-    right: 5rem;
-}
-.suite-formation-haut {
-    top: 345vh;
-    right: 5rem;
-    display: block;
-    transform: rotate(180deg);
+.content-about {
+    background: #058c4200;
+    height: 100vh;
+    padding-top: 8rem;
 }
 
 /* Section projets */
@@ -529,12 +519,4 @@ fieldset button:hover {
     border: 1px solid var(--magnolia-color);
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
-
 }
-
-
-
-
-
-
-
