@@ -500,6 +500,7 @@ textarea:focus {
     border: 2px solid var(--magnolia-color),
         inset 0px;
     box-shadow: 1px 1px 20px var(--malachite-color);
+	border: none;
 }
 input::placeholder,
 textarea::placeholder {
@@ -520,3 +521,4 @@ fieldset button:hover {
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
 }
+
