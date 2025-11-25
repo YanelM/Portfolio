@@ -567,10 +567,11 @@ fieldset button {
     border-radius: 5px;
 }
 fieldset button:hover {
-    border: 1px solid var(--magnolia-color);
+    border: 2px solid var(--magnolia-color);
     background-color: var(--seagreen-color);
     box-shadow: 1px 1px 10px var(--malachite-color);
 }
+
 
 
 
