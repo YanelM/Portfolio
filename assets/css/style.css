@@ -462,9 +462,10 @@ header a {
 .experience-formation div {
     display: flex;
     justify-content: space-between;
+	gap: 20px;
 }
 .lieu {
-    padding: 0.5rem;
+    padding: 1.2rem;
 }
 .carousel {
     width: 100%;
@@ -887,4 +888,5 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
