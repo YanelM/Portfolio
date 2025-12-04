@@ -103,12 +103,15 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
         $(".menu-souligne").click(function() {
-            $("header").removeClass("menu-open");
-            $("#mobile-menu-button").css("visibility", "visible");
-            $("#mobile-menu-button-fermer").css("visibility", "hidden");
-            $(".header-nav").addClass("visi");
+            if (window.innerWidth <= 600) {  // uniquement en mobile
+                $("header").removeClass("menu-open");
+                $("#mobile-menu-button").css("visibility", "visible");
+                $("#mobile-menu-button-fermer").css("visibility", "hidden");
+                $(".header-nav").addClass("visi");
+            }
         });
     });
 
 });
+
 
