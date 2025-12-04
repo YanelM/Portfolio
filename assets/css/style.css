@@ -722,6 +722,9 @@ header a {
         max-width: 23rem;
         height: 28rem;
     }
+	.container-projets {
+        justify-content: center;
+    }
 }
 
 /* Section Contact -----------------------------------------------------------------------------------------------------------*/
@@ -891,6 +894,7 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
 
 
