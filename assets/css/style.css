@@ -278,14 +278,18 @@ header a {
     .home-right {
         right: 20%;
         left: 20%;
-        top: 30rem;
+        top: 8rem;
     }
     .coin {
         width: 200px;
         height: 200px;
     }
     .home-left {
-        padding-top: 7rem;
+        padding-top: 19rem;
+    }
+	.coin::after {
+        bottom: -70px;
+        width: 200px;
     }
 }
 /* Pop up -------------------------------------------------------------------------------------------------------------------*/
@@ -883,3 +887,4 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
