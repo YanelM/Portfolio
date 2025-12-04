@@ -720,10 +720,13 @@ header a {
     .item-projets:nth-child(2),
     .item-projets:nth-child(3) {
         max-width: 23rem;
-        height: 28rem;
+        height: 31rem;
     }
 	.container-projets {
         justify-content: center;
+    }
+	.carousel {
+        padding-top: 2rem;
     }
 }
 
@@ -894,6 +897,7 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
 
 
