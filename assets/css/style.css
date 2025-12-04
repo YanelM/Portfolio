@@ -134,6 +134,7 @@ header a {
     height: 20px;
     width: 20px;
 }
+
 /* Section home -------------------------------------------------------------------------------------------------------------*/
 .home {
     display: flex;
@@ -271,6 +272,19 @@ header a {
         padding-top: 15rem;
     }
 }
+@media (max-width: 53rem) {
+    /* Téléphones en paysage + petits tablets */
+    .coin {
+        width: 170px;
+        height: 170px;
+    }
+    .home-right {
+        right: 5rem;
+    }
+    .home {
+        height: 120vh;
+    }
+}
 @media screen and (max-width: 38rem) { /* -600px */
     .home h2 {
         font-size: 1.5rem;
@@ -278,20 +292,25 @@ header a {
     .home-right {
         right: 20%;
         left: 20%;
-        top: 8rem;
+        top: 10rem;
     }
     .coin {
         width: 200px;
         height: 200px;
     }
     .home-left {
-        padding-top: 19rem;
+        padding-top: 21rem;
     }
-	.coin::after {
+    .coin::after {
         bottom: -70px;
         width: 200px;
     }
+    .home {
+        height: 80vh;
+    }
 }
+
+
 /* Pop up -------------------------------------------------------------------------------------------------------------------*/
 
 #about-popup {
@@ -462,7 +481,7 @@ header a {
 .experience-formation div {
     display: flex;
     justify-content: space-between;
-	gap: 20px;
+    gap: 20px;
 }
 .experience-formation div p:last-child {
     text-align: end;
@@ -520,6 +539,18 @@ header a {
         width: 95%;
     }
 }
+@media (max-width: 53rem) {
+    /* Téléphones en paysage + petits tablets */
+    .about {
+        height: 160vh;
+    }
+    #experiences {
+        height: 130vh;
+    }
+    #formations {
+        height: 130vh;
+    }
+}
 @media screen and (max-width: 38rem) { /* -600px */
     .about-first {
         flex-direction: column;
@@ -548,6 +579,12 @@ header a {
 
     .experience-formation {
         width: 90%;
+    }
+    #experiences {
+        height: 90vh;
+    }
+    #formations {
+        height: 90vh;
     }
 }
 
@@ -712,6 +749,12 @@ header a {
         height: 155vh;
     }
 }
+@media (max-width: 53rem) {
+    /* Téléphones en paysage + petits tablets */
+    #projets {
+        height: 390vh;
+    }
+}
 @media screen and (max-width: 38rem) { /* -600px */
     #projets {
         height: 190vh;
@@ -720,12 +763,13 @@ header a {
     .item-projets:nth-child(2),
     .item-projets:nth-child(3) {
         max-width: 23rem;
-		min-width: 23rem;
+        min-width: 23rem;
         height: 29rem;
     }
-	.container-projets {
+    .container-projets {
         justify-content: center;
     }
+
 }
 
 /* Section Contact -----------------------------------------------------------------------------------------------------------*/
@@ -895,9 +939,3 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
-
-
-
-
-
-
