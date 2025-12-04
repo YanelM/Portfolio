@@ -752,12 +752,12 @@ header a {
 @media (max-width: 53rem) {
     /* Téléphones en paysage + petits tablets */
     #projets {
-        height: 390vh;
+        height: 410vh;
     }
 }
 @media screen and (max-width: 38rem) { /* -600px */
     #projets {
-        height: 210vh;
+        height: 190vh;
     }
     .item-projets:nth-child(1),
     .item-projets:nth-child(2),
@@ -939,4 +939,5 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
