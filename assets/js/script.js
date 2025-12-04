@@ -101,6 +101,14 @@ window.addEventListener("DOMContentLoaded", () => {
             $("#mobile-menu-button-fermer").css("visibility", "hidden");
             $(".header-nav").addClass("visi");
         });
+
+        $(".menu-souligne").click(function() {
+            $("header").removeClass("menu-open");
+            $("#mobile-menu-button").css("visibility", "visible");
+            $("#mobile-menu-button-fermer").css("visibility", "hidden");
+            $(".header-nav").addClass("visi");
+        });
     });
 
 });
+
