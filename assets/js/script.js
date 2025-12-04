@@ -1,88 +1,91 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            const targetPosition = target.offsetTop;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const duration = 1500; // 👈 durée du défilement (en ms) — plus grand = plus lent
-            let start = null;
+// Attend que le HTML soit chargé
+window.addEventListener("DOMContentLoaded", () => {
 
-            function animation(currentTime) {
-            if (start === null) start = currentTime;
-            const progress = currentTime - start;
-            const percent = Math.min(progress / duration, 1);
-            window.scrollTo(0, startPosition + distance * percent);
-            if (progress < duration) requestAnimationFrame(animation);
-            }
+    // Récupération de la section about et du popup
+    const aboutSection = document.getElementById("about");
+    const toast = document.getElementById("about-popup");
 
-            requestAnimationFrame(animation);
+    // Sécurité si un élément est manquant
+    if (!aboutSection || !toast) return;
+
+    // Observer pour afficher/cacher le popup selon la visibilité
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            toast.classList.toggle("show", entry.isIntersecting);
         });
-    });
+    }, { threshold: 0.3 });
 
-    const boxes = document.querySelectorAll('.item-projets');
+    observer.observe(aboutSection);
 
-    boxes.forEach(box => {
-        box.addEventListener('mouseenter', () => {
-            const siblings = box.parentElement.querySelectorAll('.item-projets');
-            siblings.forEach(sib => {
-            if (sib !== box) {
-                sib.style.filter = 'brightness(0.5)';
-            }
-            });
-        });
 
-        box.addEventListener('mouseleave', () => {
-            const siblings = box.parentElement.querySelectorAll('.item-projets');
-            siblings.forEach(sib => {
-                sib.style.filter = 'brightness(1)';
-            });
-        });
-    });
+    // ===== Création de la sphère =====
+    const sphere = document.getElementById("sphere");
+    const rings = 24;
+    const dotsPerRing = 32;
+    const radius = 80;
 
-    const about = document.getElementById("about");
-    const formations = document.getElementById("formations");
-    const btn = document.getElementById("scroll-down-btn");
+    for (let i = 0; i < rings; i++) {
+        const ring = document.createElement("div");
+        ring.className = "ring";
 
-    function showBtn() {
-    btn.style.display = "block";
+        const theta = (i / (rings - 1)) * Math.PI;
+        const ringRadius = Math.sin(theta) * radius;
+        const y = Math.cos(theta) * radius;
+
+        ring.style.transform = `translate(-50%, -50%) translateY(${y}px)`;
+
+        for (let j = 0; j < dotsPerRing; j++) {
+            const dot = document.createElement("div");
+            dot.className = "dot";
+
+            const phi = (j / dotsPerRing) * 2 * Math.PI;
+            const x = Math.cos(phi) * ringRadius;
+            const z = Math.sin(phi) * ringRadius;
+
+            dot.style.transform = `translateX(${x}px) translateZ(${z}px)`;
+            ring.appendChild(dot);
+        }
+
+        sphere.appendChild(ring);
     }
 
-    function hideBtn() {
-    btn.style.display = "none";
-    }
 
-    // Observer la section "À propos"
-    const observerAbout = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        showBtn();
-        } else {
-        hideBtn();
-        }
-    });
-    }, { threshold: 0.1 });
+    // ===== Bouton "Voir plus" =====
+    document.querySelectorAll(".btn-voir-plus").forEach(btn => {
+        btn.addEventListener("click", function () {
 
-    observerAbout.observe(about);
+            const item = this.closest(".item-projets");
+            const suite = item.querySelector(".suite");
+            const carousel = item.querySelector(".carousel");
+            const lienProjet = item.querySelector(".lien-projet");
 
-    // Observer la section "Formations" pour cacher le bouton
-    const observerFormations = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        hideBtn();     // on cache si on entre dans formations
-        }
-    });
-    }, { threshold: 0.1 });
+            const isHidden = suite.style.display === "none" || suite.style.display === "";
 
-    observerFormations.observe(formations);
+            suite.style.display = isHidden ? "inline" : "none";
+            carousel.style.display = isHidden ? "none" : "block";
+            lienProjet.style.display = isHidden ? "none" : "inline";
 
-    btn.addEventListener("click", () => {
-        window.scrollBy({
-            top: 800,
-            behavior: "smooth",
+            this.textContent = isHidden ? "Voir moins" : "Voir plus";
         });
     });
-    
+
+
+    // ===== Menu mobile =====
+    $(document).ready(function() {
+
+        $("#mobile-menu-button").click(function() {
+            $("header").addClass("menu-open");
+            $("#mobile-menu-button").css("visibility", "hidden");
+            $("#mobile-menu-button-fermer").css("visibility", "visible");
+            $(".header-nav").removeClass("visi");
+        });
+
+        $("#mobile-menu-button-fermer").click(function() {
+            $("header").removeClass("menu-open");
+            $("#mobile-menu-button").css("visibility", "visible");
+            $("#mobile-menu-button-fermer").css("visibility", "hidden");
+            $(".header-nav").addClass("visi");
+        });
+    });
+
 });
