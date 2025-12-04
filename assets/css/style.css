@@ -757,7 +757,7 @@ header a {
 }
 @media screen and (max-width: 38rem) { /* -600px */
     #projets {
-        height: 190vh;
+        height: 210vh;
     }
     .item-projets:nth-child(1),
     .item-projets:nth-child(2),
@@ -939,3 +939,4 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
