@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
 </head>
 <body>
     <header>
         <h2>Yanel <span>MOISSON</span></h2>
-        <nav class="header-nav">
+        <nav class="header-nav visi">
             <ul>
-                <li><a href="#home" class="menu-souligne-h">Home</a></li>
-                <li><a href="#about" class="menu-souligne-a">À propos</a></li>
-                <li><a href="#projets" class="menu-souligne-p">Projets</a></li>
-                <li><a href="#contact" class="menu-souligne-c">Contact</a></li>
+                <li><a href="#home" class="menu-souligne">Home</a></li>
+                <li><a href="#about" class="menu-souligne">À propos</a></li>
+                <li><a href="#projets" class="menu-souligne">Projets</a></li>
+                <li><a href="#contact" class="menu-souligne">Contact</a></li>
             </ul>
         </nav>
-        <div>
-            <a href="https://github.com/YanelM" target="_blank"><img class="icon" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
+        <div class="visi">
+            <a href="https://github.com/YanelM" target="_blank"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
         </div>
-        <button id="scroll-down-btn"><img src="assets/images/icones/fleches.png" alt="descendre"></button>
+        <!-- Bouton MENU pour mobile -->
+        <div id="mobile-menu-button" class="button"><img src="assets/images/icones/burger-bar.png" alt="burger-bar"></div> 
+        <div id="mobile-menu-button-fermer" class="button"><img src="assets/images/icones/burger-bar-verticale.png" alt="burger-bar-verticale"></div>
     </header>
     <section id="home" class="content row">
         <div class="home">
@@ -29,9 +32,9 @@
                 <p>Bonjour, je suis Yanel <span>MOISSON</span></p>
                 <h2 class="typing">Apprenti Développeur Web</h2>
                 <a class="cv" href="assets/fichier/CV Yanel MOISSON.pdf" download="cv_yanel_moisson.pdf">Mon CV</a>
-                <div class="icon-home">
-                    <a href="https://github.com/YanelM" target="_blank"><img class="icon" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
+                <div class="icon-home" id="icon-home-sous-cv">
+                    <a href="https://github.com/YanelM" target="_blank"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="home-right">
@@ -39,27 +42,33 @@
             </div>
         </div>
     </section>
+
+    <div id="about-popup">
+        <a href="#experiences" class="menu-souligne">Experiences</a>
+        <a href="#formations" class="menu-souligne">Formations</a>
+    </div>
+
     <section id="about" class="content row">
         <div class="about">
             <h2 class="h2-party">À propos de moi</h2>
             <div class="about-first">
                 
                 <div class="about-left">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Bonjour, je m’appelle Yanel, j’ai 20 ans et je suis passionné par la création de sites web esthétiques et immersifs, pensés pour offrir une expérience unique et une véritable ambiance.</p>
                     <br>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum passage.</p>
+                    <p>Actuellement en formation, je développe progressivement mes compétences à travers des projets concrets, des expériences pratiques et une veille constante sur les évolutions de mon secteur. Motivé et curieux, j’accorde une grande importance à l’apprentissage, à la remise en question et au travail bien fait. Mon objectif est de construire un parcours professionnel solide, en participant à des projets stimulants et formateurs.</p>
                     <h3>Skills & Technologies</h3>
                     <div class="container-about">
-                        <div class="item-about">HTML5</div>
-                        <div class="item-about">CSS3</div>
-                        <div class="item-about">JavaScript</div>
-                        <div class="item-about">Node.js</div>
-                        <div class="item-about">React</div>
-                        <div class="item-about">WordPress</div>
-                        <div class="item-about">7</div>
-                        <div class="item-about">8</div>
-                        <div class="item-about">9</div>
-                        <div class="item-about">10</div>
+                        <div class="heptagone">
+                            <div class="face f1">HTML5</div>
+                            <div class="face f2">CSS3</div>
+                            <div class="face f3">JavaScript</div>
+                            <div class="face f4">PHP</div>
+                            <div class="face f5">WordPress</div>
+                            <div class="face f6">Figma</div>
+                            <div class="face f7">GitHub</div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="about-right">
@@ -76,35 +85,60 @@
         
         <div id="experiences" class="content-about">
             <h2 class="h2-party">Expériences professionnelles</h2>
-            <div class="experience">
-                <div>
-                    <p>Concepteur web - Stage</p>
-                    <p>Avril - Mai 2025</p>
+            <div class="experience-div">
+                <div class="experience-formation">
+                    <div>
+                        <p>Concepteur web - Stage</p>
+                        <p>Avril - Mai 2025</p>
+                    </div>
+                    <p class="lieu">Immersive - Agence web - Orléans</p>
+                    <div class="carousel">
+                        <ul>
+                            <li>Mise en place d'environnement d'hébergement</li>
+                            <li>Intégration de design sur WordPress</li>
+                            <li>Maintenance technique de sites clients</li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="entreprise">Immersive - Agence web - Orléans</p>
-                <div class="carousel">
-                    <ul>
-                        <li>Mise en place d'environnement d'hébergement</li>
-                        <li>Intégration de design sur WordPress</li>
-                        <li>Maintenance technique de sites clients</li>
+                <div class="experience-formation">
+                    <div>
+                        <p>Création de contenu sur les réseaux - Bénévolat</p>
+                        <p>2024</p>
+                    </div>
+                    <p class="lieu">Collectif "Pas de bébés à la consigne Charente"</p>
+                    <ul class="non-carousel">
+                        <li>Création de visuels sur Facebook pour l'association</li>
                     </ul>
                 </div>
-            </div>
-            <div class="experience">
-                <div>
-                    <p>Création de contenu sur les réseaux - Bénévolat</p>
-                    <p>2024</p>
-                </div>
-                <p class="entreprise">Collectif "Pas de bébés à la consigne Charente"</p>
-                <ul class="non-carousel">
-                    <li>Création de visuels sur Facebook pour l'association</li>
-                </ul>
             </div>
         </div>
         <div id="formations" class="content-about">
             <h2 class="h2-party">Formations</h2>
-            <div class="formation">
-
+            <div class="formation-div">
+                <div class="experience-formation">
+                    <div>
+                        <p>Licence Pro Métiers de l'informatique - Applications web</p>
+                        <p>2024 - 2027</p>
+                    </div>
+                    <p class="lieu">CVTIC - Université de Limoges</p>
+                </div>
+                <div class="experience-formation">
+                    <div>
+                        <p>Licence Informatique - Première année</p>
+                        <p>2023 - 2024</p>
+                    </div>
+                    <p class="lieu">Université de Limoges - Limoges</p>
+                </div>
+                <div class="experience-formation">
+                    <div>
+                        <p>Licence Pro Métiers de l'informatique - Applications web</p>
+                        <p>2023</p>
+                    </div>
+                    <p class="lieu">Lycée de Confolens - Confolens</p>
+                    <ul class="non-carousel">
+                        <li>Spécialités : Mathématiques et NSI</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -112,43 +146,77 @@
         <h2 class="h2-party">Mes Projets</h2>
         <div class="container-projets">
             <div class="item-projets">
-                <img src="assets/images/projets/carbonara.jpg" alt="">
+                <img src="assets/images/sismodata.png" alt="SismoData">
                 <div class="item-projets-elm">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
+                    <h3>SismoData</h3>
+                    <p>
+                        SismoData est un site éducatif et informatif, développé dans le cadre d’un projet collaboratif. Il vise à informer
+                        <span class="suite">
+                            sur les séismes (leur origine, les mesures de prévention) tout en donnant accès à des données récentes issues de sources fiables. Le site propose également des outils de recherche personnalisés permettant d’explorer les séismes selon différents critères comme la date, le lieu ou la magnitude.
+                        </span>
+                        <button class="btn-voir-plus">Voir plus</button>
+                    </p>
                 </div>
-                <div class="container-projets-2">
-                    <div class="item-projets-2">HTML5</div>
-                    <div class="item-projets-2">CSS3</div>
-                    <div class="item-projets-2">JavaScript</div>
+                <div class="carousel">
+                    <div class="track">
+                        <div class="slide s1">HTML5</div>
+                        <div class="slide s2">CSS3</div>
+                        <div class="slide s3">JavaScript</div>
+
+                        <div class="slide s1">HTML5</div>
+                        <div class="slide s2">CSS3</div>
+                        <div class="slide s3">JavaScript</div>
+                    </div>
                 </div>
-                <a href="#">GitHub</a>
+                <a class="lien-projet" href="https://mrrdurandeau.github.io/miniprojet220/" target="_blank">GitHub</a>
             </div>
             <div class="item-projets">
-                <img src="assets/images/projets/saladecésar.webp" alt="">
+                <img src="assets/images/baresto.png" alt="Baresto">
                 <div class="item-projets-elm">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
+                    <h3>Baresto</h3>
+                    <p>
+                        J'ai eu l'occasion, pendant un stage, de travailler pour un client du nom de Baresto. Ils souhaitaient faire la refonte de leur site.
+                        <span class="suite">
+                            
+                        </span>
+                        <button class="btn-voir-plus">Voir plus</button>
+                    </p>
                 </div>
-                <div class="container-projets-2">
-                    <div class="item-projets-2">HTML5</div>
-                    <div class="item-projets-2">CSS3</div>
-                    <div class="item-projets-2">JavaScript</div>
+                <div class="carousel">
+                    <div class="track">
+                        <div class="slide s1">WordPress</div>
+                        <div class="slide s2">WordPress</div>
+                        <div class="slide s3">WordPress</div>
+
+                        <div class="slide s1">WordPress</div>
+                        <div class="slide s2">WordPress</div>
+                        <div class="slide s3">WordPress</div>
+                    </div>
                 </div>
-                <a href="#">GitHub</a>
+                <a class="lien-projet" href="https://baresto.fr/" target="_blank">Voir le site</a>
             </div>
             <div class="item-projets">
-                <img src="assets/images/projets/tartepomme.jfif" alt="">
-                <div class="item-projets-elm">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
+                <div class="border-sphere"><div class="sphere" id="sphere"></div></div>
+                <div class="en-cours">
+                    <div class="item-projets-elm">
+                        <h3>À venir</h3>
+                        <p>
+                            Projet en cours...
+                        </p>
+                    </div>
+                    <div class="carousel en-cours-carousel">
+                        <div class="track">
+                            <div class="slide s1">HTML5</div>
+                            <div class="slide s2">CSS3</div>
+                            <div class="slide s3">JavaScript</div>
+
+                            <div class="slide s1">HTML5</div>
+                            <div class="slide s2">CSS3</div>
+                            <div class="slide s3">JavaScript</div>
+                        </div>
+                    </div>
+                    <a class="lien-projet" href="#">En cours</a>
                 </div>
-                <div class="container-projets-2">
-                    <div class="item-projets-2">HTML5</div>
-                    <div class="item-projets-2">CSS3</div>
-                    <div class="item-projets-2">JavaScript</div>
-                </div>
-                <a href="#">GitHub</a>
             </div>
         </div>
     </section>
@@ -156,38 +224,43 @@
         <h2 class="h2-party">Me contacter</h2>
         <div class="contact">
             <div class="contact-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>N’hésitez pas à me contacter, je serai ravi d’échanger avec vous !</p>
                 <ul>
                     <li><a class="contact-a" href="mailto:votreadresse@mail.fr" target="_blank"><img class="icon" src="assets/images/icones/enveloppe-de-courrier-electronique.png" alt="icon">yanel.moisson@gmail.com</a></li>
                     <li><a class="contact-a" href="tel:0767835005" target="_blank"><img class="icon" src="assets/images/icones/silhouette-de-poignee-de-telephone.png" alt="icon">+33 7 67 83 50 05</a></li>
                     <li><a class="contact-a" href="https://www.google.com/maps/place/Angoulême/" target="_blank"><img class="icon" src="assets/images/icones/pointeur-de-localisation.png" alt="icon">Angoulême, France</a></li>
                 </ul>
                 <div class="icon-contact">
-                    <a href="https://github.com/YanelM" target="_blank"><img class="icon" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/YanelM" target="_blank"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="contact-right">
                 <form>
                     <fieldset>
                         <div>
-                            <label for="name">Nom&nbsp;:</label>
-                            <input type="text" id="name" name="user_name" placeholder="Votre Nom"/>
+                            <label for="nom">Nom&nbsp;:</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre Nom"/>
                         </div>
                         <div>
                             <label for="mail">E-mail&nbsp;:</label>
-                            <input type="email" id="mail" name="user_email" placeholder="Votre Email"/>
+                            <input type="email" id="email" name="email" placeholder="Votre Email"/>
                         </div>
                         <div>
-                            <label for="msg">Message&nbsp;:</label>
-                            <textarea id="msg" name="user_message" placeholder="Votre Message"></textarea>
+                            <label for="message">Message&nbsp;:</label>
+                            <textarea id="message" name="message" placeholder="Votre Message"></textarea>
                         </div>
-                        <button type="submit" class="btn">Envoyer</button>
+                        <button type="submit" class="btn" id="valider">Envoyer</button>
                     </fieldset>
                 </form>
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("CUJ3GV-0EhJSBBHSM");
+    </script>
+    <script src="assets/js/form.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
