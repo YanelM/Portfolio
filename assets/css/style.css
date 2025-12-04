@@ -464,6 +464,9 @@ header a {
     justify-content: space-between;
 	gap: 20px;
 }
+.experience-formation div p:last-child {
+    text-align: end;
+}
 .lieu {
     padding: 1.2rem;
 }
@@ -888,5 +891,6 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
 
