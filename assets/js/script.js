@@ -21,46 +21,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(aboutSection);
 
-    const sphere = document.getElementById("sphere");
-
-    const rings = 24;     // nombre d'anneaux
-    const dotsPerRing = 32; // points par anneau
-    const radius = 80;   // rayon de la sphère
-
-    for (let i = 0; i < rings; i++) {
-
-        const ring = document.createElement("div");
-        ring.className = "ring";
-
-        // angle vertical de l’anneau
-        const theta = (i / (rings - 1)) * Math.PI; // 0 → π
-
-        // rayon horizontal de l’anneau
-        const ringRadius = Math.sin(theta) * radius;
-
-        // hauteur de l’anneau
-        const y = Math.cos(theta) * radius;
-
-        ring.style.transform = `translate(-50%, -50%) translateY(${y}px)`;
-
-        for (let j = 0; j < dotsPerRing; j++) {
-
-            const dot = document.createElement("div");
-            dot.className = "dot";
-
-            // angle autour du cercle
-            const phi = (j / dotsPerRing) * 2 * Math.PI;
-
-            const x = Math.cos(phi) * ringRadius;
-            const z = Math.sin(phi) * ringRadius;
-
-            dot.style.transform = `translateX(${x}px) translateZ(${z}px)`;
-
-            ring.appendChild(dot);
-        }
-
-        sphere.appendChild(ring);
-    }
 
     document.querySelectorAll(".btn-voir-plus").forEach(btn => {
         btn.addEventListener("click", function () {
@@ -113,5 +73,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
 
 
