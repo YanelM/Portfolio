@@ -706,16 +706,7 @@ header a {
 .en-cours-carousel {
     padding-top: 2.9rem;
 }
-.border-sphere {
-    border-bottom: 1px solid #ffffff39;
-}
-.sphere {
-    position: relative;
-    width: 370px;
-    height: 190px;
-    transform-style: preserve-3d;
-    animation: rotate 10s linear infinite;
-}
+
 .ring {
     position: absolute;
     top: 50%;
@@ -939,5 +930,6 @@ fieldset button:hover {
         background-color: var(--night-color);
     }
 }
+
 
 
