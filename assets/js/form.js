@@ -1,55 +1,52 @@
 window.addEventListener("DOMContentLoaded", () => {
-// Formulaire de contact
+    document.addEventListener("submit", (event) => {
+        const form = event.target.closest(".book-contact-form, .fresh-contact-form");
 
-    document.querySelector('form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Empêche l'envoi classique du formulaire
-        testChampsRenseignes();
+        if (!form) {
+            return;
+        }
+
+        event.preventDefault();
+        testChampsRenseignes(form);
     });
 
-    function testChampsRenseignes() {
+    function testChampsRenseignes(form) {
+        const monNom = form.querySelector('[name="nom"]');
+        const monEmail = form.querySelector('[name="email"]');
+        const monMessage = form.querySelector('[name="message"]');
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        let monNom = document.querySelector('#nom');
-        let monEmail = document.querySelector('#email');
-        let monMessage = document.querySelector('#message');
-
-        // ===== Vérification Nom =====
         if (monNom.value.trim() === "") {
             alert("Nom mal renseigné !");
             return false;
         }
 
-        // ===== Vérification Email =====
-        let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (monEmail.value.trim() === "") {
+        if (monEmail.value.trim() === "" || !regexEmail.test(monEmail.value.trim())) {
             alert("Email mal renseigné !");
             return false;
         }
 
-        if (!regexEmail.test(monEmail.value.trim())) {
-            alert("Format de l'email invalide !");
-            return false;
-        }
-
-        // ===== Vérification Message (textarea) =====
         if (monMessage.value.trim() === "") {
             alert("Le message ne peut pas être vide !");
             return false;
         }
 
-        // ===== Contenu du mail =====
-        let contenuMail =
+        if (!window.emailjs) {
+            alert("Le service d'envoi est momentanément indisponible.");
+            return false;
+        }
+
+        const contenuMail =
             "Nom : " + monNom.value + "\n" +
             "Email : " + monEmail.value + "\n\n" +
             "Message :\n" + monMessage.value;
 
-        // ===== Envoi EmailJS =====
-        emailjs.send("service_6ovvctn","template_oe0srcp", {
+        emailjs.send("service_6ovvctn", "template_oe0srcp", {
             contenu: contenuMail
         })
         .then(function () {
             alert("Message envoyé avec succès");
-            document.querySelector('form').reset();
+            form.reset();
         })
         .catch(function (error) {
             alert("Erreur lors de l'envoi : " + error.text);
