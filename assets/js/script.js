@@ -10,17 +10,6 @@ if (document.body.classList.contains("playfolio-mode")) {
         const dialogClose = document.querySelector(".dialog-close");
 
         const projectDetails = {
-            sismodata: {
-                title: "SismoData",
-                intro: "Site éducatif et informatif développé dans le cadre d'un projet collaboratif.",
-                details: [
-                    "Information sur les séismes, leur origine et les mesures de prévention.",
-                    "Accès à des données récentes issues de sources fiables.",
-                    "Outils de recherche selon la date, le lieu ou la magnitude."
-                ],
-                tags: ["HTML5", "CSS3", "JavaScript"],
-                link: "https://mrrdurandeau.github.io/miniprojet220/"
-            },
             baresto: {
                 title: "Baresto",
                 intro: "Refonte d'un site client réalisée pendant mon stage en agence web.",
