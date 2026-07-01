@@ -3,36 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/icones/favicon.svg">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <meta name="description" content="Portfolio de Yanel Moisson, apprenti développeur web spécialisé dans la création de sites modernes, responsive et immersifs.">
+    <title>Yanel Moisson | Développeur web</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=details-images-2026">
 </head>
-<body>
+<body class="playfolio-mode">
+    <main class="playfolio" id="start">
+        <nav class="folio-rail" aria-label="Navigation du portfolio">
+            <a class="folio-logo" href="#start" aria-label="Accueil">YM</a>
+            <div class="folio-links">
+                <a href="#profile">Profil</a>
+                <a href="#skills">Skills</a>
+                <a href="#path">Parcours</a>
+                <a href="#work">Projets</a>
+                <a href="#talk">Contact</a>
+            </div>
+            <button class="palette-button" type="button" aria-label="Changer l'ambiance couleur">Palette</button>
+        </nav>
+
+        <button class="folio-menu" type="button" aria-label="Ouvrir la navigation">Menu</button>
+
+        <section class="hero-lab">
+            <div class="hero-copy">
+                <p class="folio-eyebrow">Portfolio développeur web</p>
+                <h1>Yanel Moisson crée des sites web vivants, clairs et mémorables.</h1>
+                <p>
+                    Apprenti développeur web à Angoulême, je conçois des interfaces esthétiques,
+                    responsive et agréables à utiliser, avec une vraie attention portée à l'expérience.
+                </p>
+                <div class="hero-actions">
+                    <a class="folio-button primary" href="#work">Explorer mes projets</a>
+                    <a class="folio-button secondary" href="assets/fichier/CV_Yanel_Moisson.pdf" download="CV_Yanel_Moisson.pdf">Télécharger mon CV</a>
+                </div>
+            </div>
+
+            <div class="hero-board" aria-label="Résumé de profil">
+                <article class="profile-ticket">
+                    <img src="assets/images/yanel_moisson_photo.jpg" alt="Portrait de Yanel Moisson">
+                    <div>
+                        <span>Disponible pour projets web</span>
+                        <h2>Apprenti développeur web</h2>
+                        <p>HTML, CSS, JavaScript, WordPress et curiosité en continu.</p>
+                    </div>
+                </article>
+
+                <article class="quick-stat color-one">
+                    <strong>20 ans</strong>
+                    <span>Motivé, curieux, en progression constante</span>
+                </article>
+                <article class="quick-stat color-two">
+                    <strong>Front-end</strong>
+                    <span>Interfaces propres, responsive et intuitives</span>
+                </article>
+                <article class="quick-stat color-three">
+                    <strong>Objectif</strong>
+                    <span>Participer à des projets stimulants et formateurs</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="folio-section profile-section" id="profile">
+            <div class="section-heading">
+                <p class="folio-eyebrow">Profil</p>
+                <h2>Une approche entre technique, ambiance et précision.</h2>
+            </div>
+            <div class="profile-grid">
+                <article class="story-card">
+                    <h3>À propos de moi</h3>
+                    <p>
+                        Bonjour, je m'appelle Yanel, j'ai 20 ans et je suis passionné par la création
+                        de sites web esthétiques et immersifs, pensés pour offrir une expérience unique
+                        et une véritable ambiance.
+                    </p>
+                    <p>
+                        Actuellement en formation, je développe progressivement mes compétences à travers
+                        des projets concrets, des expériences pratiques et une veille constante sur les
+                        évolutions de mon secteur.
+                    </p>
+                </article>
+                <article class="mindset-card">
+                    <span>Ma méthode</span>
+                    <h3>Apprendre, tester, améliorer.</h3>
+                    <p>
+                        J'accorde une grande importance à l'apprentissage, à la remise en question et au
+                        travail bien fait.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="folio-section skills-section" id="skills">
+            <div class="section-heading">
+                <p class="folio-eyebrow">Compétences</p>
+                <h2>Mes outils de création web.</h2>
+            </div>
+            <div class="skill-playground">
+                <button type="button" class="skill-chip active" data-skill="Structure de pages propres et accessibles.">HTML5</button>
+                <button type="button" class="skill-chip" data-skill="Mise en page responsive, animations et identités visuelles.">CSS3</button>
+                <button type="button" class="skill-chip" data-skill="Interactions, logique côté navigateur et expériences dynamiques.">JavaScript</button>
+                <button type="button" class="skill-chip" data-skill="Bases back-end et intégration de fonctionnalités côté serveur.">PHP</button>
+                <button type="button" class="skill-chip" data-skill="Intégration, refonte, maintenance et respect de chartes graphiques.">WordPress</button>
+                <button type="button" class="skill-chip" data-skill="Maquettes, cohérence visuelle et préparation d'interfaces.">Figma</button>
+                <button type="button" class="skill-chip" data-skill="Versioning, partage de projets et collaboration.">GitHub</button>
+                <article class="skill-preview">
+                    <span>Focus compétence</span>
+                    <p>Structure de pages propres et accessibles.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="folio-section path-section" id="path">
+            <div class="section-heading">
+                <p class="folio-eyebrow">Parcours</p>
+                <h2>Formation et premières expériences terrain.</h2>
+            </div>
+            <div class="route-map">
+                <article class="route-card">
+                    <span>Mai - Juin 2026</span>
+                    <h3>Développeur web - Stage</h3>
+                    <p>Agence Infini à Brie</p>
+                    <ul>
+                        <li>Création de sites WordPress</li>
+                        <li>Création de sites en code avec fonctionnalités avancées</li>
+                        <li>Amélioration SEO</li>
+                        <li>Maintenance technique de sites clients</li>
+                        <li>Tournage vidéo</li>
+                    </ul>
+                </article>
+                <article class="route-card">
+                    <span>Avril - Mai 2025</span>
+                    <h3>Concepteur web - Stage</h3>
+                    <p>Immersive, agence web à Orléans</p>
+                    <ul>
+                        <li>Mise en place d'environnements d'hébergement</li>
+                        <li>Intégration de designs sur WordPress</li>
+                        <li>Maintenance technique de sites clients</li>
+                    </ul>
+                </article>
+                <article class="route-card">
+                    <span>2024</span>
+                    <h3>Création de contenu - Bénévolat</h3>
+                    <p>Collectif "Pas de bébés à la consigne Charente"</p>
+                    <ul>
+                        <li>Création de visuels sur Facebook pour l'association</li>
+                    </ul>
+                </article>
+                <article class="route-card">
+                    <span>2024 - 2027</span>
+                    <h3>Licence Pro Métiers de l'informatique - Applications web</h3>
+                    <p>CVTIC - Université de Limoges</p>
+                </article>
+                <article class="route-card">
+                    <span>2023 - 2024</span>
+                    <h3>Licence Informatique - Première année</h3>
+                    <p>Université de Limoges</p>
+                </article>
+                <article class="route-card">
+                    <span>2023</span>
+                    <h3>Baccalauréat général</h3>
+                    <p>Lycée de Confolens · spécialités Mathématiques et NSI</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="folio-section work-section" id="work">
+            <div class="section-heading">
+                <p class="folio-eyebrow">Projets</p>
+                <h2>Des réalisations à explorer comme des cartes de mission.</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card" data-project="sismodata">
+                    <img src="assets/images/sismodata.png" alt="Aperçu du projet SismoData">
+                    <div>
+                        <span>Projet collaboratif</span>
+                        <h3>SismoData</h3>
+                        <p>Site éducatif et informatif autour des séismes, avec données récentes et outils de recherche.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <button type="button" class="folio-button secondary project-more">Détails</button>
+                        <a class="folio-button primary" href="https://mrrdurandeau.github.io/miniprojet220/" target="_blank" rel="noreferrer">Voir le site</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project="baresto">
+                    <img src="assets/images/baresto.png" alt="Aperçu du projet Baresto">
+                    <div>
+                        <span>Stage agence web</span>
+                        <h3>Baresto</h3>
+                        <p>Participation à la refonte d'un site client pendant un stage en agence web.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>Intégration</span>
+                            <span>Charte graphique</span>
+                        </div>
+                        <button type="button" class="folio-button secondary project-more">Détails</button>
+                        <a class="folio-button primary" href="https://baresto.fr/" target="_blank" rel="noreferrer">Voir le site</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project="alldesign">
+                    <img src="assets/images/alldesign.png" alt="Aperçu du projet AllDesign Angoulême">
+                    <div>
+                        <span>Stage agence web</span>
+                        <h3>AllDesign Angoulême</h3>
+                        <p>Site WordPress créé de A à Z pour une agence web, avec optimisation SEO.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>SEO</span>
+                            <span>Création de A à Z</span>
+                        </div>
+                        <button type="button" class="folio-button secondary project-more">Détails</button>
+                        <a class="folio-button primary" href="https://alldesign-angouleme.fr" target="_blank" rel="noreferrer">Voir le site</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project="graphoenix">
+                    <img src="assets/images/graphoenix.png" alt="Aperçu du projet Graphoenix">
+                    <div>
+                        <span>Stage agence web</span>
+                        <h3>Graphoenix</h3>
+                        <p>Intervention sur un site WordPress avec mise à jour globale et amélioration responsive téléphone/tablette.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>Mise à jour globale</span>
+                            <span>Responsive mobile/tablette</span>
+                        </div>
+                        <button type="button" class="folio-button secondary project-more">Détails</button>
+                        <a class="folio-button primary" href="https://www.graphoenix.fr" target="_blank" rel="noreferrer">Voir le site</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project="rapportstageinfini">
+                    <img src="assets/images/rapport-stage-infini.png" alt="Aperçu du rapport de stage Infini">
+                    <div>
+                        <span>Rapport de stage agence web</span>
+                        <h3>Rapport Stage Infini</h3>
+                        <p>Rapport de stage codé de A à Z en HTML, CSS et JavaScript pour présenter mon expérience en agence web.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Code de A à Z</span>
+                        </div>
+                        <button type="button" class="folio-button secondary project-more">Détails</button>
+                        <a class="folio-button primary" href="https://rapport-stage-infini.fr" target="_blank" rel="noreferrer">Voir le site</a>
+                    </div>
+                </article>
+                <article class="project-card next-project">
+                    <div class="idea-machine" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div>
+                        <span>En préparation</span>
+                        <h3>Nouveau projet</h3>
+                        <p>Une prochaine réalisation viendra compléter ce portfolio avec plus d'interactions et de contenu.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="folio-section contact-section" id="talk">
+            <div class="contact-panel">
+                <div>
+                    <p class="folio-eyebrow">Contact</p>
+                    <h2>Une idée, une refonte ou une opportunité ? Parlons-en.</h2>
+                    <p>N'hésitez pas à me contacter, je serai ravi d'échanger avec vous.</p>
+                    <div class="contact-links">
+                        <a href="mailto:yanel.moisson@gmail.com">yanel.moisson@gmail.com</a>
+                        <a href="tel:+33767835005">+33 7 67 83 50 05</a>
+                        <a href="https://www.google.com/maps/place/Angoul%C3%AAme/" target="_blank" rel="noreferrer">Angoulême, France</a>
+                        <a href="https://github.com/YanelM" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+                <form class="fresh-contact-form">
+                    <label for="fresh-nom">Nom</label>
+                    <input type="text" id="fresh-nom" name="nom" placeholder="Votre nom">
+                    <label for="fresh-email">E-mail</label>
+                    <input type="email" id="fresh-email" name="email" placeholder="Votre email">
+                    <label for="fresh-message">Message</label>
+                    <textarea id="fresh-message" name="message" placeholder="Votre message"></textarea>
+                    <button class="folio-button primary" type="submit">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+
+        <dialog class="project-dialog" aria-label="Détails du projet">
+            <button class="dialog-close" type="button" aria-label="Fermer">Fermer</button>
+            <div class="dialog-content"></div>
+        </dialog>
+    </main>
     <header>
-        <h2>Yanel <span>MOISSON</span></h2>
+        <a class="brand" href="#home">Yanel <span>MOISSON</span></a>
         <nav class="header-nav visi">
             <ul>
-                <li><a href="#home" class="menu-souligne">Home</a></li>
+                <li><a href="#home" class="menu-souligne">Accueil</a></li>
                 <li><a href="#about" class="menu-souligne">À propos</a></li>
                 <li><a href="#projets" class="menu-souligne">Projets</a></li>
                 <li><a href="#contact" class="menu-souligne">Contact</a></li>
             </ul>
         </nav>
-        <div class="visi">
-            <a href="https://github.com/YanelM" target="_blank"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
+        <div class="header-socials visi">
+            <a href="https://github.com/YanelM" target="_blank" rel="noreferrer"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank" rel="noreferrer"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
         </div>
         <!-- Bouton MENU pour mobile -->
-        <div id="mobile-menu-button" class="button"><img src="assets/images/icones/burger-bar.png" alt="burger-bar"></div> 
-        <div id="mobile-menu-button-fermer" class="button"><img src="assets/images/icones/burger-bar-verticale.png" alt="burger-bar-verticale"></div>
+        <button id="mobile-menu-button" class="button" type="button" aria-label="Ouvrir le menu"><img src="assets/images/icones/burger-bar.png" alt=""></button> 
+        <button id="mobile-menu-button-fermer" class="button" type="button" aria-label="Fermer le menu"><img src="assets/images/icones/burger-bar-verticale.png" alt=""></button>
     </header>
     <section id="home" class="content row">
         <div class="home">
             <div class="home-left">
-                <p>Bonjour, je suis Yanel <span>MOISSON</span></p>
-                <h2 class="typing">Apprenti Développeur Web</h2>
-                <a class="cv" href="assets/fichier/CV Yanel Moisson.pdf" download="CV Yanel Moisson">Mon CV</a>
+                <p class="eyebrow">Portfolio développeur web</p>
+                <h1>Je conçois des interfaces web <span>modernes et utiles</span>.</h1>
+                <p class="hero-intro">Bonjour, je suis Yanel Moisson, apprenti développeur web. Je transforme des idées en sites propres, responsive et agréables à utiliser, avec une vraie attention portée au design et à l'expérience utilisateur.</p>
+                <div class="hero-actions">
+                    <a class="cv cv-primary" href="#projets">Voir mes projets</a>
+                    <a class="cv cv-secondary" href="assets/fichier/CV_Yanel_Moisson.pdf" download="CV_Yanel_Moisson.pdf">Télécharger mon CV</a>
+                </div>
+                <ul class="hero-stats">
+                    <li><strong>HTML</strong><span>Structure propre</span></li>
+                    <li><strong>CSS</strong><span>Interfaces responsive</span></li>
+                    <li><strong>JS</strong><span>Interactions fluides</span></li>
+                </ul>
                 <div class="icon-home" id="icon-home-sous-cv">
                     <a href="https://github.com/YanelM" target="_blank"><img class="icon-3d" src="assets/images/icones/logo-github.png" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/yanel-moisson-a50023347" target="_blank"><img class="icon-3d" src="assets/images/icones/linkedin.png" alt="LinkedIn"></a>
@@ -90,7 +387,7 @@
                 <div class="experience-formation">
                     <div>
                         <p>Concepteur web - Stage</p>
-                        <p>Avril - Mai 2025</p>
+                        <p>Avril-Mai 2025</p>
                     </div>
                     <p class="lieu">Immersive - Agence web - Orléans</p>
                     <div class="carousel">
@@ -119,23 +416,23 @@
                 <div class="experience-formation">
                     <div>
                         <p>Licence Pro Métiers de l'informatique - Applications web</p>
-                        <p>2024 - 2027</p>
+                        <p>2024-2027</p>
                     </div>
                     <p class="lieu">CVTIC - Université de Limoges</p>
                 </div>
                 <div class="experience-formation">
                     <div>
                         <p>Licence Informatique - Première année</p>
-                        <p>2023 - 2024</p>
+                        <p>2023-2024</p>
                     </div>
                     <p class="lieu">Université de Limoges - Limoges</p>
                 </div>
                 <div class="experience-formation">
                     <div>
-                        <p>Baccalauréat général</p>
+                        <p>Licence Pro Métiers de l'informatique - Applications web</p>
                         <p>2023</p>
                     </div>
-                    <p class="lieu">Lycée Emile Roux - Confolens</p>
+                    <p class="lieu">Lycée de Confolens - Confolens</p>
                     <ul class="non-carousel">
                         <li>Spécialités : Mathématiques et NSI</li>
                     </ul>
@@ -144,7 +441,7 @@
         </div>
     </section>
     <section id="projets" class="content row">
-        <h2 class="h2-party">Mes Projets</h2>
+        <h2 class="h2-party">Mes projets</h2>
         <div class="container-projets">
             <div class="item-projets">
                 <img src="assets/images/sismodata.png" alt="SismoData">
@@ -197,29 +494,27 @@
                 <a class="lien-projet" href="https://baresto.fr/" target="_blank">Voir le site</a>
             </div>
             <div class="item-projets">
-                <img src="assets/images/capaulie.png" alt="TOUTES EN UNE">
-                <div class="item-projets-elm">
-                    <h3>TOUTES EN UNE</h3>
-                    <p>
-                        TOUT EN UNE est un site type blog que j'ai réalisé de A à Z, à la demande d'une cliente.
-                        <span class="suite">
-                            J'y ai appris à héberger un site web, gérer plusieurs centaines d'articles et répondre aux attentes d'un client.
-                        </span>
-                        <button class="btn-voir-plus">Voir plus</button>
-                    </p>
-                </div>
-                <div class="carousel">
-                    <div class="track">
-                        <div class="slide s1">WordPress</div>
-                        <div class="slide s2">WordPress</div>
-                        <div class="slide s3">WordPress</div>
-
-                        <div class="slide s1">WordPress</div>
-                        <div class="slide s2">WordPress</div>
-                        <div class="slide s3">WordPress</div>
+                <div class="border-sphere"><div class="sphere" id="sphere"></div></div>
+                <div class="en-cours">
+                    <div class="item-projets-elm">
+                        <h3>À venir</h3>
+                        <p>
+                            Projet en cours...
+                        </p>
                     </div>
+                    <div class="carousel en-cours-carousel">
+                        <div class="track">
+                            <div class="slide s1">HTML5</div>
+                            <div class="slide s2">CSS3</div>
+                            <div class="slide s3">JavaScript</div>
+
+                            <div class="slide s1">HTML5</div>
+                            <div class="slide s2">CSS3</div>
+                            <div class="slide s3">JavaScript</div>
+                        </div>
+                    </div>
+                    <a class="lien-projet" href="#">En cours</a>
                 </div>
-                <a class="lien-projet" href="https://capaulie.fr" target="_blank">Voir le site</a>
             </div>
         </div>
     </section>
@@ -229,7 +524,7 @@
             <div class="contact-left">
                 <p>N’hésitez pas à me contacter, je serai ravi d’échanger avec vous !</p>
                 <ul>
-                    <li><a class="contact-a" href="mailto:votreadresse@mail.fr" target="_blank"><img class="icon" src="assets/images/icones/enveloppe-de-courrier-electronique.png" alt="icon">yanel.moisson@gmail.com</a></li>
+                    <li><a class="contact-a" href="mailto:yanel.moisson@gmail.com"><img class="icon" src="assets/images/icones/enveloppe-de-courrier-electronique.png" alt="icon">yanel.moisson@gmail.com</a></li>
                     <li><a class="contact-a" href="tel:0767835005" target="_blank"><img class="icon" src="assets/images/icones/silhouette-de-poignee-de-telephone.png" alt="icon">+33 7 67 83 50 05</a></li>
                     <li><a class="contact-a" href="https://www.google.com/maps/place/Angoulême/" target="_blank"><img class="icon" src="assets/images/icones/pointeur-de-localisation.png" alt="icon">Angoulême, France</a></li>
                 </ul>
@@ -246,7 +541,7 @@
                             <input type="text" id="nom" name="nom" placeholder="Votre Nom"/>
                         </div>
                         <div>
-                            <label for="mail">E-mail&nbsp;:</label>
+                            <label for="email">E-mail&nbsp;:</label>
                             <input type="email" id="email" name="email" placeholder="Votre Email"/>
                         </div>
                         <div>
@@ -261,9 +556,11 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        emailjs.init("CUJ3GV-0EhJSBBHSM");
+        if (window.emailjs) {
+            emailjs.init("CUJ3GV-0EhJSBBHSM");
+        }
     </script>
     <script src="assets/js/form.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=details-images-2026"></script>
 </body>
 </html>
