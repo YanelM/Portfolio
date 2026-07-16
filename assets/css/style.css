@@ -3487,7 +3487,7 @@ body.playfolio-mode span {
     }
 
     .skill-preview {
-        grid-column: auto;
+        grid-column: 1 / -1;
     }
 
     .route-map {
