@@ -38,7 +38,7 @@ if (document.body.classList.contains("playfolio-mode")) {
                 intro: "Intervention sur un site WordPress pendant un stage en agence web.",
                 details: [
                     "Mise à jour globale du site.",
-                    "Travail sur WordPress.",
+                    "Travail sur WordPress Divi.",
                     "Optimisation de l'affichage responsive téléphone et tablette.",
                     "Ajustements pour améliorer la cohérence visuelle du site."
                 ],
@@ -50,11 +50,11 @@ if (document.body.classList.contains("playfolio-mode")) {
                 intro: "Rapport de stage agence web développé entièrement en code.",
                 details: [
                     "Site codé de A à Z.",
-                    "Structure HTML complète.",
+                    "Développement PHP.",
                     "Mise en page et animations en CSS.",
                     "Interactions développées en JavaScript."
                 ],
-                tags: ["HTML", "CSS", "JavaScript", "Code de A à Z"],
+                tags: ["PHP", "CSS", "JavaScript", "Code de A à Z"],
                 link: "https://rapport-stage-infini.fr"
             }
         };
@@ -261,18 +261,6 @@ const bookSpreads = [
         label: "Projets",
         left: {
             kicker: "Projet 01",
-            title: "SismoData",
-            image: "assets/images/sismodata.png",
-            imageAlt: "Aperçu du projet SismoData",
-            text: [
-                "Site éducatif et informatif développé en collaboration pour informer sur les séismes, leur origine et les mesures de prévention.",
-                "Le projet donne accès à des données récentes et propose des recherches selon la date, le lieu ou la magnitude."
-            ],
-            tags: ["HTML5", "CSS3", "JavaScript"],
-            link: { label: "Voir le site", href: "https://mrrdurandeau.github.io/miniprojet220/" }
-        },
-        right: {
-            kicker: "Projet 02",
             title: "Baresto",
             image: "assets/images/baresto.png",
             imageAlt: "Aperçu du projet Baresto",
@@ -282,6 +270,18 @@ const bookSpreads = [
             ],
             tags: ["WordPress", "Intégration", "Charte graphique"],
             link: { label: "Voir le site", href: "https://baresto.fr/" }
+        },
+        right: {
+            kicker: "Projet 02",
+            title: "AllDesign Angoulême",
+            image: "assets/images/alldesign.png",
+            imageAlt: "Aperçu du projet AllDesign Angoulême",
+            text: [
+                "Site WordPress créé de A à Z pour une agence web.",
+                "Le projet met en avant les services, les réalisations et l'optimisation SEO."
+            ],
+            tags: ["WordPress", "SEO", "Création de A à Z"],
+            link: { label: "Voir le site", href: "https://alldesign-angouleme.fr" }
         }
     },
     {
