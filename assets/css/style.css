@@ -3020,7 +3020,7 @@ body.playfolio-mode span {
 
 .skill-playground {
     display: grid;
-    grid-template-columns: repeat(7, minmax(88px, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 12px;
     padding: 18px;
     border-color: rgba(0, 229, 255, 0.5);
@@ -3028,7 +3028,12 @@ body.playfolio-mode span {
 }
 
 .skill-chip {
+    display: flex;
+    width: 100%;
     min-height: 88px;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
     padding: 12px;
     border: 1px solid rgba(0, 255, 136, 0.36);
     border-radius: 18px;
@@ -3036,6 +3041,7 @@ body.playfolio-mode span {
     background: rgba(5, 11, 18, 0.84);
     cursor: pointer;
     font-weight: 950;
+    text-align: center;
     transition: transform 0.18s ease, background-color 0.18s ease;
 }
 
@@ -3162,7 +3168,9 @@ body.playfolio-mode span {
 }
 
 .project-card > div:not(.idea-machine) {
-    display: grid;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     gap: 12px;
     padding: 20px;
 }
@@ -3171,6 +3179,11 @@ body.playfolio-mode span {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: auto;
+}
+
+.project-card .folio-button {
+    width: 100%;
 }
 
 .project-tags span {
@@ -3407,6 +3420,10 @@ body.playfolio-mode span {
     .profile-grid {
         grid-template-columns: 1fr;
     }
+
+    .skill-playground {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 720px) {
@@ -3461,9 +3478,12 @@ body.playfolio-mode span {
     }
 
     .hero-board,
-    .profile-ticket,
-    .skill-playground {
+    .profile-ticket {
         grid-template-columns: 1fr;
+    }
+
+    .skill-playground {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .skill-preview {
