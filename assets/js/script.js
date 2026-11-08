@@ -24,6 +24,20 @@ if (document.body.classList.contains("playfolio-mode")) {
                 tags: ["WordPress", "Webdesign", "Responsive", "SEO"],
                 link: "https://fleursdevie.net/"
             },
+            capaulie: {
+                title: "Toutes en une – Capaulie",
+                intro: "Création d'un blog personnel sur mesure avec WordPress, destiné à partager des expériences, des réflexions et des publications autour de trois univers distincts.",
+                details: [
+                    "Conception et réalisation complète d'un blog WordPress pour un particulier.",
+                    "Création d'une identité visuelle personnalisée, avec une interface élégante et responsive.",
+                    "Organisation du contenu autour de trois univers : Capaulie, Hélix et Lili.",
+                    "Personnalisation des pages, des catégories et de l'affichage des publications.",
+                    "Optimisation de l'expérience utilisateur et de la navigation sur ordinateur, tablette et mobile.",
+                    "Configuration du référencement naturel (SEO), du sitemap et des outils d'indexation."
+                ],
+                tags: ["WordPress", "Webdesign", "Responsive", "SEO"],
+                link: "https://www.capaulie.fr/"
+            },
             baresto: {
                 title: "Baresto",
                 intro: "Refonte d'un site client réalisée pendant mon stage en agence web.",
