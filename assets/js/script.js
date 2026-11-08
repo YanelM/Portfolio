@@ -10,6 +10,20 @@ if (document.body.classList.contains("playfolio-mode")) {
         const dialogClose = document.querySelector(".dialog-close");
 
         const projectDetails = {
+            
+            fleursdevie: {
+                title: "Fleurs de Vie",
+                intro: "Conception et réalisation complète d'un site vitrine WordPress pour une boutique florale située à Rumilly.",
+                details: [
+                    "Création d'un site vitrine moderne et responsive sous WordPress.",
+                    "Conception d'une identité visuelle élégante, adaptée à l'univers floral.",
+                    "Mise en valeur des créations florales, des services et de l'histoire de la boutique.",
+                    "Optimisation du référencement naturel (SEO) et de la visibilité locale sur Google.",
+                    "Configuration des outils de suivi et de référencement : Google Site Kit, Search Console et Yoast SEO."
+                ],
+                tags: ["WordPress", "Webdesign", "Responsive", "SEO"],
+                link: "https://fleursdevie.net/"
+            },
             baresto: {
                 title: "Baresto",
                 intro: "Refonte d'un site client réalisée pendant mon stage en agence web.",
